@@ -11,6 +11,13 @@
             </li><!-- End Dashboard Nav -->
 
             <li class="nav-item">
+                <a class="nav-link collapsed" href="/transaksi">
+                    <i class="ri-add-line"></i>
+                    <span>Transaksi</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+
+            <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-menu-button-wide"></i><span>Master</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
@@ -20,11 +27,7 @@
                             <i class="bi bi-circle"></i><span>Barang</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="/kategori">
-                            <i class="bi bi-circle"></i><span>Kategori</span>
-                        </a>
-                    </li>
+
                 </ul>
             </li><!-- End Components Nav -->
 

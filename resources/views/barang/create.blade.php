@@ -29,18 +29,6 @@
                             </div>
 
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label">Kategori</label>
-                                <div class="col-sm-10 input-group">
-                                    <select class="form-select" aria-label="Default select example" name="kategori_id">
-                                        <option selected disabled>Pilih Kategori</option>
-                                        @foreach ($kategoris as $kategori)
-                                            <option value="{{ $kategori->id }}">{{ $kategori->nama_kategori }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="row mb-3">
                                 <label for="inputText" class="col-sm-2 col-form-label">Harga Beli</label>
                                 <div class="col-sm-10 input-group">
                                     <span class="input-group-text" id="inputGroupPrepend">Rp. </span>
@@ -73,6 +61,22 @@
                             </div>
 
                             <div class="row mb-3">
+                                <label for="inputText" class="col-sm-2 col-form-label">Harga Grosir</label>
+                                <div class="col-sm-10 input-group">
+                                    <span class="input-group-text" id="inputGroupPrepend">Rp. </span>
+                                    <input type="number"
+                                        class="form-control @if ($errors->has('harga_grosir')) is-invalid @endif"
+                                        value="{{ old('harga_grosir') }}" name="harga_grosir" required>
+                                    {{-- error code --}}
+                                    @if ($errors->has('harga_grosir'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('harga_grosir') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
                                 <label for="inputText" class="col-sm-2 col-form-label">Stok</label>
                                 <div class="col-sm-10 input-group">
                                     <input type="number" class="form-control" name="stok" required
@@ -87,6 +91,7 @@
                                         <option selected disabled>Pilih Satuan</option>
                                         <option value="ecer">Ecer</option>
                                         <option value="grosir">Grosir</option>
+                                        <option value="ecer_grosir">Ecer & Grosir</option>
                                     </select>
                                 </div>
                             </div>

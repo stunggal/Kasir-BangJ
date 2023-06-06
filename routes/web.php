@@ -19,9 +19,5 @@ Route::get('/', [BarangController::class, 'index']);
 Route::get('/barang', [BarangController::class, 'index']);
 Route::get('/barang/create', [BarangController::class, 'create']);
 Route::post('/barang/create', [BarangController::class, 'store']);
-
-Route::get('/kategori', [KategoriController::class, 'index']);
-Route::get('/kategori/create', [KategoriController::class, 'create']);
-Route::post('/kategori/create', [KategoriController::class, 'store']);
-Route::get('/kategori/edit/{kategori}', [KategoriController::class, 'edit']);
-Route::post('/kategori/edit/{kategori}', [KategoriController::class, 'update']);
+Route::get('/barang/edit/{barang}', [BarangController::class, 'edit']);
+Route::post('/barang/edit/{barang}', [BarangController::class, 'update']);
